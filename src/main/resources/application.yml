@@ -1,0 +1,30 @@
+spring:
+  jackson:
+    property-naming-strategy: SNAKE_CASE
+  datasource:
+    url: jdbc:h2:mem:testdb
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+  h2:
+    console:
+      enabled: true
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: create-drop
+    properties:
+      hibernate:
+        generate_statistics: false
+        jdbc:
+          batch_size: 25
+        order_inserts: true
+        order_updates: true
+
+
+api:
+  external:
+    discogs:
+      url: https://api.discogs.com
+      access-token: qJNhNhoOaYohwLPRCvoMWwALttDhqpMnlbrlLsBy
+
